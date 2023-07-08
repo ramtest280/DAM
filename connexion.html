@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+      <div class="container">
+        <div class="card card-login">
+          <div class="card-body">
+            <h5 class="card-title text-center"><i class="fas fa-lock fa-lg"></i></h5>
+            <form onsubmit="login(event)">
+              <div class="form-group">
+                <label for="username">
+                  <i class="fas fa-user contact-icon"></i>
+                </label>
+                <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d'utilisateur">
+              </div>
+              <div class="form-group">
+                  <label for="password">Mot de passe</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+                    <div class="input-group-append">
+                      <span class="password-toggle-icon" onclick="togglePasswordVisibility()">
+                        <i class="far fa-eye"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              <button type="submit" class="btn btn-primary btn-block buttonseconnecter" onclick="login()">Se connecter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-fixed float-right">
+        <div class="card-body ">
+          <h5 class="card-title">Ma carte</h5>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore illum commodi enim tempore totam doloremque iusto odio maiores quod numquam dolorem blanditiis explicabo autem, facere minima, sunt quibusdam consequuntur. Voluptates.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum modi fugit assumenda, sint pariatur minus sunt tempora laudantium adipisci impedit dolorem quia id, omnis repellendus quibusdam voluptatem distinctio. Facere?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aliquam commodi alias rerum nemo nisi dignissimos natus nostrum officiis, quidem aliquid placeat facere minima magnam dolorum dolore, neque nulla tempora!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi labore repudiandae laborum corrupti quibusdam. Perferendis a, provident voluptate, illo libero nihil voluptas blanditiis debitis dolore, repudiandae eius eveniet excepturi cum.
+          </p>
+        </div>
+      </div>
+    
+       
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var icon = document.querySelector(".password-toggle-icon i");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+        }
+      }
+
+      var passwordInput = document.getElementById("password");
+      passwordInput.addEventListener("input", function() {
+        var icon = document.querySelector(".password-toggle-icon i");
+        if (passwordInput.value !== "") {
+          icon.style.display = "block";
+        } else {
+          icon.style.display = "none";
+        }
+      });
+
+      function login(){
+        var username = document.getElementById('username').value; //recuperer la valeur
+        var password = document.getElementById('password').value;
+
+        // Vérifier les informations de connexion
+        if (username === 'safidy' && password === '1234') {
+          // Rediriger vers la page d'accueil
+          window.location.href = 'home.html';
+        } else {
+          alert('Identifiant ou mot de passe incorrect');
+        }
+      }
+      </script>
+    </body>
+    </html>
+</body>
+</html>

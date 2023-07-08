@@ -1,0 +1,133 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ffffff, #b3d9ff);
+  }
+
+  .navbar-brand .logo {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    margin-right: 50px;
+    background: #f4f0f0;
+  }
+
+  .navbar-item-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  #navbarNav{
+    background-color: red;
+    margin-right: 120vh;
+  }
+
+  .left-sidebar {
+    position: fixed;
+    top: 200px;
+    left: 20px;
+    width: 100px;
+    height: 60vh;
+    background: linear-gradient(to top right, #8ba5bf, #753d81);
+    border-radius: 30px;
+    padding: 20px;
+  }
+  a:hover{
+    color: #ffffff;
+  }
+  .right-sidebar {
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    width: 100px;
+    height: 60vh;
+    border-radius: 100vh;
+    background: linear-gradient(to top right, #ffffff, #b3d9ff);
+    padding: 20px;
+  }
+  .content {
+    width: 127vh;
+    height: auto;
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 20px;
+    background-color: rgb(35, 41, 44);
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    border-radius: 50px;
+  }
+
+  .logo-container {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .vertical-line {
+    border-right: 2px solid rgb(22, 24, 22);
+  }
+  .right-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .right-sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .right-sidebar a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .left-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .left-sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .left-sidebar a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .p-1{
+    font-size: large;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .sidebar-item {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+  }
+
+
+  .logo-sidebar-horizontale img{
+    max-width: 50%;
+    max-height: 50%;
+  }
