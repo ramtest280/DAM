@@ -6,7 +6,8 @@
     <title>Connexion</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js"></script>
 </head>
 <body>
   
@@ -14,7 +15,7 @@
         <div class="card card-login">
           <div class="card-body">
             <h5 class="card-title text-center"><i class="fas fa-lock fa-lg"></i></h5>
-            <form onsubmit="login(event)">
+            <form>
               <div class="form-group">
                 <label for="username">
                   <i class="fas fa-user contact-icon"></i>
@@ -53,45 +54,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function togglePasswordVisibility() {
-        var passwordInput = document.getElementById("password");
-        var icon = document.querySelector(".password-toggle-icon i");
-
-        if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          icon.classList.remove("fa-eye");
-          icon.classList.add("fa-eye-slash");
-        } else {
-          passwordInput.type = "password";
-          icon.classList.remove("fa-eye-slash");
-          icon.classList.add("fa-eye");
-        }
-      }
-
-      var passwordInput = document.getElementById("password");
-      passwordInput.addEventListener("input", function() {
-        var icon = document.querySelector(".password-toggle-icon i");
-        if (passwordInput.value !== "") {
-          icon.style.display = "block";
-        } else {
-          icon.style.display = "none";
-        }
-      });
-
-      function login(){
-        var username = document.getElementById('username').value; //recuperer la valeur
-        var password = document.getElementById('password').value;
-
-        // Vérifier les informations de connexion
-        if (username === 'safidy' && password === '1234') {
-          // Rediriger vers la page d'accueil
-          window.location.href = 'home.html';
-        } else {
-          alert('Identifiant ou mot de passe incorrect');
-        }
-      }
-      </script>
     </body>
     </html>
 </body>
