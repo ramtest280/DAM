@@ -35,3 +35,5 @@ function login(){
     alert('Identifiant ou mot de passe incorrect');
   }
 }
+
+const urlParams = new URLSearchParams(window.location.search);

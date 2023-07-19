@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cartes dynamiques avec paramètres</title>
+    <style>
+        /* Styles pour les cartes (facultatif, à des fins de démonstration) */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cardContainer">
+        <h1>sa</h1>
+    </div>
+
+    <script>
+        // Récupérer les paramètres d'URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Exemple de données pour les cartes (vous pouvez utiliser vos propres données)
+        const cardData = [
+            { title: urlParams.get('title1'), content: urlParams.get('content1') },
+            { title: urlParams.get('title2'), content: urlParams.get('content2') },
+            { title: urlParams.get('title3'), content: urlParams.get('content3') }
+        ];
+
+        // Fonction pour générer les cartes à partir des données
+        function generateCards() {
+            const cardContainer = document.getElementById('cardContainer');
+
+            cardData.forEach(data => {
+                const cardDiv = document.createElement('div');
+                cardDiv.classList.add('card');
+
+                const titleElement = document.createElement('h2');
+                titleElement.textContent = data.title;
+
+                const contentElement = document.createElement('p');
+                contentElement.textContent = data.content;
+
+                cardDiv.appendChild(titleElement);
+                cardDiv.appendChild(contentElement);
+
+                cardContainer.appendChild(cardDiv);
+            });
+        }
+
+        // Appeler la fonction pour générer les cartes au chargement de la page
+        generateCards();
+    </script>
+</body>
+
+</html>
